@@ -1,0 +1,214 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Root variables */
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a56d4;
+  --accent: #f72585;
+  --bg-light: #f8f9fc;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-radius: 1rem;
+}
+
+/* Base reset */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding-top: 76px; /* for fixed navbar */
+}
+
+/* Smooth transitions */
+a, button, .card, .badge {
+  transition: all 0.2s ease-in-out;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  background: linear-gradient(135deg, var(--primary) 0%, #7209b7 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: #fff !important;
+}
+
+.navbar .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff !important;
+}
+
+.navbar .nav-link.active {
+  background: rgba(255,255,255,0.25);
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: none;
+  color: #fff;
+}
+
+/* ========== Cards ========== */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  background: var(--card-bg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-weight: 600;
+}
+
+/* ========== Dashboard specific ========== */
+.welcome-banner {
+  background: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.welcome-banner h1 {
+  font-weight: 700;
+}
+
+.welcome-banner p {
+  opacity: 0.9;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.stat-card .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-card .stat-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========== Lesson list ========== */
+.lesson-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: white;
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.lesson-list-item:hover {
+  background: #f1f5f9;
+  color: var(--primary);
+}
+
+.badge-completed {
+  background: #10b981;
+  color: #fff;
+  padding: 0.35em 0.75em;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-success {
+  background: #10b981;
+  border: none;
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ========== Quiz ========== */
+.quiz-question {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  margin-bottom: 1rem;
+}
+
+.correct-answer {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.wrong-answer {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ========== Chart containers ========== */
+.chart-container {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 66px;
+  }
+  .welcome-banner {
+    padding: 1.5rem;
+  }
+}
